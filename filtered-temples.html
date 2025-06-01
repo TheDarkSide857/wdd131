@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Temple Album</title>
+  <meta name="description" content="Filtered temples display">
+  <meta name="author" content="Dallin Thomas Stewart">
+  <link rel="stylesheet" href="styles/filtered-temples.css" />
+  <link rel="stylesheet" href="styles/filtered-temples-large.css" />
+  <script src="scripts/filtered-temples.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Temple Album</h1>
+    <button id="hamburgerBtn" aria-label="Toggle Navigation">&#9776;</button>
+    <nav id="primaryNav">
+      <ul>
+        <li><a href="#" data-filter="all">Home</a></li>
+        <li><a href="#" data-filter="old">Old</a></li>
+        <li><a href="#" data-filter="new">New</a></li>
+        <li><a href="#" data-filter="large">Large</a></li>
+        <li><a href="#" data-filter="small">Small</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Temples Around the World</h2>
+    <div class="grid" id="templeGrid"></div>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Dallin Stewart, US</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
