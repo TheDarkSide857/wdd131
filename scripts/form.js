@@ -14,3 +14,6 @@ products.forEach(product => {
     option.textContent = product.name;
     select.appendChild(option);
 });
+
+document.getElementById("currentyear").textContent = new Date().getFullYear();
+document.getElementById("lastModified").textContent = `Last Modified: ${document.lastModified}`;
