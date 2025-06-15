@@ -1,9 +1,9 @@
 body {
-    font-family: 'Roboto', sans-serif;
     margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
     color: #2D3142;
+    line-height: 1.6;
 }
   
 header {
@@ -12,61 +12,188 @@ header {
     padding: 1rem;
     text-align: center;
 }
+
+.header-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
   
 .logo {
-    vertical-align: middle;
-    height: 40px;
-    margin-right: 10px;
+    width: 80px;
+    height: auto;
+    margin-bottom: 0.5rem;
 }
   
-h1, h2 {
-    font-family: 'Merriweather', serif;
+nav {
+    margin-top: 1rem;
 }
   
-main {
-    padding: 2rem;
-    max-width: 800px;
-    margin: auto;
-    background-color: white;
-    box-shadow: 0 0 8px rgba(0,0,0,0.1);
-}
-  
-section {
-    margin-bottom: 2rem;
-}
-  
-.color-sample {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    border-radius: 4px;
-    vertical-align: middle;
-    margin-right: 10px;
-}
-  
-.color-primary {
-    background-color: #2D3142;
-}
-  
-.color-accent {
-    background-color: #00BFFF;
-}
-  
-.wireframes {
+.nav-menu {
+    list-style: none;
+    padding: 0;
     display: flex;
+    justify-content: center;
+    gap: 1rem;
     flex-wrap: wrap;
-    gap: 20px;
 }
   
-.wireframes img {
-    max-width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+.nav-menu a {
+    color: #00BFFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+  
+.nav-menu a:hover {
+    text-decoration: underline;
+}
+  
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+    background-color: #000;
+}
+  
+.hero img {
+    width: 100%;
+    height: auto;
+    opacity: 0.6;
+}
+  
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    border-radius: 10px;
+}
+  
+.hero-text h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+  
+.features {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+    max-width: 1000px;
+    margin: auto;
+}
+  
+.card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-left: 5px solid #00BFFF;
+}
+  
+.card h3 {
+    font-family: 'Merriweather', serif;
+    color: #2D3142;
+    margin-top: 0;
 }
   
 footer {
     text-align: center;
-    padding: 1rem;
     background-color: #2D3142;
     color: white;
+    padding: 1rem;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}
+
+form {
+    max-width: 600px;
+    margin: 1rem auto;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+  
+.form-section {
+    margin-bottom: 1rem;
+}
+  
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+}
+  
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.6rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #999;
+    background-color: white;
+}
+  
+.checkbox-group label {
+    display: block;
+    margin: 0.4rem 0;
+    font-weight: normal;
+}
+  
+.star-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.3rem;
+    font-size: 1.2rem;
+}
+  
+.rating-inputs {
+    display: flex;
+    justify-content: space-between;
+}
+  
+.rating-inputs input[type="radio"] {
+    width: 20px;
+    height: 20px;
+}
+  
+input[type="submit"] {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: white;
+    border: 2px solid black;
+    cursor: pointer;
+}
+  
+input[type="submit"]:hover {
+    background-color: #eee;
+}
+  
+.optional {
+    font-weight: normal;
+    font-size: 0.9em;
+    color: #3a003a;
+}
+  
+footer {
+    background-color: #252525;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+@media (min-width: 768px) {
+    .features {
+      grid-template-columns: repeat(3, 1fr);
+    }
 }

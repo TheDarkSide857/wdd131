@@ -3,65 +3,122 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Site Plan - Pixel Pulse Gaming</title>
-  <link rel="stylesheet" href="siteplan.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Merriweather:wght@700&display=swap" rel="stylesheet" />
+  <meta name="description" content="Dallin Thomas Stewart, WDD 131 - Dynamic Web Fundamentals, Product Review Form" />
+  <meta name="author" content="Dallin Thomas Stewart" />
+  <title>The Nexus - Home</title>
+  <link rel="stylesheet" href="styles/siteplan.css" />
+  <script src="scripts/siteplan.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Merriweather:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <h1><img src="images/logo.png" alt="The Nexus Logo" class="logo" />The Nexus</h1>
-    <p>Your hub for the latest in gaming reviews, news, and community rankings</p>
+    <div class="header-wrapper">
+      <img src="images/logo.png" alt="The Nexus Logo" class="logo" loading="lazy" />
+      <h1>The Nexus</h1>
+    </div>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#rankings">Rankings</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main>
-    <section>
-      <h2>Site Name</h2>
-      <p><strong>The Nexus</strong> — This name reflects the dynamic and fast-paced nature of the video game industry. It conveys energy, community, and a passion for games across all genres and platforms.</p>
-      <p><em>Optional Domain:</em> thenexus.com</p>
-    </section>
-
-    <section>
-      <h2>Site Purpose</h2>
-      <p>The site aims to be a central hub for gamers looking for game reviews, upcoming release calendars, developer interviews, and a community voting platform for favorite games. It also features blog posts, video content, and editorials on industry trends.</p>
-    </section>
-
-    <section>
-      <h2>Scenarios</h2>
-      <ul>
-        <li>What are the top-rated indie games released this year?</li>
-        <li>How does the new open-world RPG from Studio X compare to its predecessor?</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Color Schema</h2>
-      <ul>
-        <li><span class="color-sample color-primary"></span> <strong>Charcoal Gray (#2D3142)</strong> – Used for headers, nav background, and footer</li>
-        <li><span class="color-sample color-accent"></span> <strong>Electric Blue (#00BFFF)</strong> – Used for buttons, hover links, and callouts</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Typography</h2>
-      <ul>
-        <li><strong>Merriweather</strong> – Used for main titles and section headings</li>
-        <li><strong>Roboto</strong> – Used for all body text, descriptions, and UI elements</li>
-      </ul>
-    </section>
-
-    <section>
-        <h2>Wireframe</h2>
-        <p>Below is the combined wireframe for the home page layout (mobile + desktop):</p>
-        <figure>
-          <img src="images/wireframe.png" alt="Mobile and Desktop Wireframe">
-          <figcaption>Mobile (left) and Desktop (right) views of the homepage wireframe</figcaption>
-        </figure>
+    <section class="hero">
+      <img src="images/hero.jpg" alt="Featured Game Banner" />
+      <div class="hero-text">
+        <h2>Discover What's Next in Gaming</h2>
+        <p>Explore in-depth reviews, upcoming releases, and more.</p>
       </div>
     </section>
+    <section class="features">
+      <article class="card">
+        <h3>Game Reviews</h3>
+        <p>In-depth reviews of the latest AAA and indie games. Our editors provide honest insights on gameplay, story, graphics, and performance.</p>
+      </article>
+      <article class="card">
+        <h3>Upcoming Releases</h3>
+        <p>Stay ahead of the curve with our curated calendar of upcoming game launches. Filter by genre, platform, and studio.</p>
+      </article>
+      <article class="card">
+        <h3>Community Rankings</h3>
+        <p>Vote and view rankings for the top games of the year as chosen by fellow gamers. Real opinions. Real results.</p>
+      </article>
+      <article class="card">
+        <h3>Developer Interviews</h3>
+        <p>Go behind the scenes with exclusive Q&As featuring game developers and artists. Discover the stories behind your favorite titles.</p>
+      </article>
+      <article class="card">
+        <h3>Industry News</h3>
+        <p>Breaking updates from around the gaming world — mergers, announcements, and esports highlights, all in one place.</p>
+      </article>
+      <article class="card">
+        <h3>Opinion & Editorial</h3>
+        <p>Engaging articles from staff and guest writers exploring trends, controversies, and the future of gaming culture.</p>
+      </article>
+    </section>
+    <form method="get" action="review.html">
+      <div class="form-section">
+        <label for="product">Game Name</label>
+        <select id="product" name="product" required>
+          <option value="" disabled selected>Choose a Game...</option>
+        </select>
+      </div>
+
+      <div class="form-section">
+        <label>Overall Rating</label>
+        <div class="star-labels">
+          <span>☆</span>
+          <span>☆☆</span>
+          <span>☆☆☆</span>
+          <span>☆☆☆☆</span>
+          <span>☆☆☆☆☆</span>
+        </div>
+        <div class="rating-inputs">
+          <input type="radio" id="rating1" name="rating" value="1" required />
+          <input type="radio" id="rating2" name="rating" value="2" />
+          <input type="radio" id="rating3" name="rating" value="3" />
+          <input type="radio" id="rating4" name="rating" value="4" />
+          <input type="radio" id="rating5" name="rating" value="5" />
+        </div>
+      </div>
+
+      <div class="form-section">
+        <label for="installDate">Date of Installation</label>
+        <input type="date" id="installDate" name="installDate" required />
+      </div>
+
+      <div class="form-section">
+        <label>Which features did you appreciate in the game?<br><em>(Check all that apply)</em></label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" id="feature2" name="features" value="Ease of Use" /> Ease of Use</label>
+          <label><input type="checkbox" id="feature3" name="features" value="Performance" /> Performance</label>
+          <label><input type="checkbox" id="feature4" name="features" value="Design" /> Design</label>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <label for="review">Written Review <span class="optional">(Optional)</span></label>
+        <textarea id="review" name="review" rows="5"></textarea>
+      </div>
+
+      <div class="form-section">
+        <label for="username">Your Name <span class="optional">(Optional)</span></label>
+        <input type="text" id="username" name="username" />
+      </div>
+
+      <div class="form-section">
+        <input type="submit" value="Post Review" />
+      </div>
+    </form>
   </main>
 
   <footer>
-    <p>Site Plan created for Web Development Course Project &copy; 2025</p>
+    <p>&copy; 2025 The Nexus | All rights reserved.</p>
   </footer>
 </body>
 </html>
